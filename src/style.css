@@ -1,3 +1,35 @@
+body {
+  font-family: "Indie Flower", cursive;
+  width: 100%;
+  font-size: 30px;
+}
+
+.weather-app {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid rgb(131, 103, 103);
+  border-radius: 6px;
+}
+
 h1 {
   color: rgb(14, 200, 138);
+  font-size: 54px;
+  font-weight: 100;
+
+  line-height: 28px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 100;
 }
