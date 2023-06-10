@@ -38,8 +38,20 @@ function displayTemperature(response) {
   iconElement.setAttribute("src", `${response.data.condition.icon_url}`);
 }
 
-let apiKey = "4f0252e46f5ob21t364250ae01f31bc7";
-let city = "Helsinki";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+function search(city) {
+  let apiKey = "4f0252e46f5ob21t364250ae01f31bc7";
 
-axios.get(apiUrl).then(displayTemperature);
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Helsinki");
