@@ -27,6 +27,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
@@ -34,9 +35,11 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
+  iconElement.setAttribute("src", `${response.data.condition.icon_url}`);
 }
 
 let apiKey = "4f0252e46f5ob21t364250ae01f31bc7";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Helsinki&key=${apiKey}`;
+let city = "Helsinki";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
 axios.get(apiUrl).then(displayTemperature);
