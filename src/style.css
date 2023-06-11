@@ -60,6 +60,9 @@ li {
 
 .weather-temperature strong {
   color: blueviolet;
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .weather-temperature .units {
