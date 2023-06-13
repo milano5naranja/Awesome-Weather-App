@@ -54,8 +54,8 @@ li {
 
 .weather-temperature img {
   margin-right: 10px;
-  height: 64px;
-  width: 64px;
+  height: 74px;
+  width: 74px;
 }
 
 .weather-temperature strong {
@@ -84,12 +84,12 @@ small {
 }
 
 .weather-forecast-date {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
 .weather-forecast-temperatures {
-  font-size: 24px;
+  font-size: 20px;
 }
